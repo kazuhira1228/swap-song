@@ -1,0 +1,31 @@
+<header class="header">
+  <h1>swap-song</h1>
+  <div class="nav">
+    <ul class="lists">
+      <%# <% if user_signed_in? %>
+        <%# <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "list" %></li> %>
+        <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "list" %></li> %>
+      <%# <% else %> %>
+        <%# <li><%= link_to 'ログイン', new_user_session_path, class: "list" %></li> %>
+        <%# <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "list" %></li> %>
+      <%# <% end %> %> %>
+    </ul>
+  </div>
+</header>
+
+<body>
+  <div class="index-main">
+    <div class="hero">
+    <%# <%= image_tag "wallpaper.png", class: "hero-image" %>  %>
+      <div class="hero-items">
+        <div class="hero-text">
+          <div class="hero-text__main">アカペラで繋がるワクワクを</div>
+          <div class="hero-text__sub">アカペラ交流アプリ　〜swap-song〜</div>
+        </div>
+        <div class="hero-btn">
+          <%= link_to '活動記録TLへ', "#", method: :get, class: "hero-btn__sub" %>
+          <%= link_to 'グループ一覧へ', "#", class: "hero-btn__sub" %>
+      </div>
+    </div>
+  </div>
+</body>
