@@ -1,13 +1,5 @@
-<header class="header">
-  <h1>swap-song</h1>
-  <div class="nav">
-    <ul class="lists">
-      <%# <li><%= link_to 'TOP', root_path, class: "list" %>
-      <%# <li><%= link_to 'ログイン', new_user_session_path, class: "list" %>
-      <%# <li><%= link_to '新規登録'%> 
-    </ul>
-  </div>
-</header>
+<%= render partial: "shared/header_devise" %>
+
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>

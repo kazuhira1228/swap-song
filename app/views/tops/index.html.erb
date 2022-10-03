@@ -1,22 +1,9 @@
-<header class="header">
-  <h1>swap-song</h1>
-  <div class="nav">
-    <ul class="lists">
-      <%# <% if user_signed_in? %>
-        <%# <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "list" %></li> %>
-        <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "list" %></li> %>
-      <%# <% else %> %>
-        <%# <li><%= link_to 'ログイン', new_user_session_path, class: "list" %></li> %>
-        <%# <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "list" %></li> %>
-      <%# <% end %> %> %>
-    </ul>
-  </div>
-</header>
+<%= render partial: "shared/header" %>
 
 <body>
   <div class="index-main">
     <div class="hero">
-    <%# <%= image_tag "wallpaper.png", class: "hero-image" %>  %>
+    <%# <%= image_tag "wallpaper.png", class: "hero-image" %>
       <div class="hero-items">
         <div class="hero-text">
           <div class="hero-text__main">アカペラで繋がるワクワクを</div>
