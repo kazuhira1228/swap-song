@@ -1,0 +1,61 @@
+.form {
+  width: 100vh;
+  margin: 50px auto;
+  padding: 0 auto;
+  text-align: center;
+}
+
+.form-title{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form input {
+  height: 30px;
+  width: 40vw;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+  background-color: #EEEEEE;
+}
+
+.genre-select {
+  height: 30px;
+  width: 40vw;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+  background-color: #EEEEEE;
+  border: 1px solid black;
+}
+
+.form textarea {
+  height: 60px;
+  width: 40vw;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+  background-color: #EEEEEE;
+}
+
+.field {
+  margin-bottom: 13px;
+  font-size: large;
+}
+
+.devise-btn {
+  width: 140px; 
+  height: 70px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  display: block; 
+  margin: auto; 
+  font-size: 20px; 
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
