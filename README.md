@@ -56,9 +56,9 @@ https://docs.google.com/spreadsheets/d/1GRtBkkSNy82Af5Ng-pJrKmbSj7qkhp0bPDIX3d2b
 | holiday            | integer    | null: false                    |
 | member_since       | date       | null: false                    |
 | favorite_part      | string     | null: false                    |
-| favorite_singer    | string     |                                |
-| more_join_id       | integer    |                                |
-| group              | string     |                                |
+| favorite_singer    | string     | null: false                    |
+| more_join_id       | integer    | null: false                    |
+| group              | string     | null: false                    |
 ### Association
 - has_many :activities
 - has_many :groups
@@ -69,9 +69,10 @@ https://docs.google.com/spreadsheets/d/1GRtBkkSNy82Af5Ng-pJrKmbSj7qkhp0bPDIX3d2b
 | ------------------ | ---------- | ------------------------------ |
 | group              | string     | null: false                    |
 | activity_day       | date       | null: false                    |
-| practice_song      | string     | null: false                    |
+| song               | string     | null: false                    |
 | studio             | string     | null: false                    |
 | text               | text       | null: false                    |
+| image              | string     |                                |
 | user               | references | foreign_key: true              |
 ### Association
 - belongs_to :user
