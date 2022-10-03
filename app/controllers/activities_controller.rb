@@ -11,7 +11,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(activity_params)
     if @activity.save
-      redirect_to action: :create
+      redirect_to action: :index
     else
       render :new
     end
@@ -34,11 +34,11 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   activity = Activity.find(params[:id])
-  #   activity.destroy
-  #   redirect_to root_path
-  # end
+  def destroy
+    activity = Activity.find(params[:id])
+    activity.destroy
+    redirect_to action: :index
+  end
 
 
   private

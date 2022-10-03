@@ -47,7 +47,7 @@
         <%= link_to '編集', edit_activity_path(@activity.id), method: :get, class: "edi_des-btn" %>
       </div>
       <div class="edi_des_a">
-        <%= link_to '削除', "#", method: :get, class: "edi_des-btn" %> 
+        <%= link_to '削除', activity_path(@activity.id), method: :delete, data: {confirm: "削除しますか？"}, class: "edi_des-btn" %> 
       </div>
     </div>
   </div>
