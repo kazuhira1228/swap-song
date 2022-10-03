@@ -17,6 +17,8 @@ class User < ApplicationRecord
     validates :more_join_id,  numericality: { other_then: 1, message: "can't be blank" }
   end
   
+  has_many :activities
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
   belongs_to :holiday

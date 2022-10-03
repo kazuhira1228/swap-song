@@ -1,0 +1,54 @@
+<%= render partial: "shared/header" %>
+
+<body>
+  <div class="form">
+    <h1 class="form-title">活動記録</h1><br/>
+    <form aciton="">
+      <table class="form-table">
+
+        <tr>
+          <th class="form-item">グループ</th>
+          <td class="form-body"><%= @activity.group %></td>
+        </tr>
+        <tr>
+          <th class="form-item">練習日</th>
+          <td class="form-body"><%= @activity.activity_day %></td>
+        </tr>
+        <tr>
+          <th class="form-item">練習曲</th>
+          <td class="form-body"><%= @activity.song %></td>
+        </tr>
+        <tr>
+          <th class="form-item">練習場所</th>
+          <td class="form-body"><%= @activity.studio %></td>
+        </tr>
+        <tr>
+          <th class="form-item">詳細</th>
+          <td class="form-body"><%= @activity.text %></td>
+        </tr>
+        <tr>
+          <th class="form-item">画像</th>
+          <td class="form-body">
+            <%= image_tag @activity.image.variant(resize: '400x400') if @activity.image.attached? %>
+          </td>
+        </tr>
+        <tr>
+          <th class="form-item">投稿者</th>
+          <td class="form-body">
+           <%= @activity.user.nickname %>さん
+          </td>
+        </tr>
+
+      </table>
+    </form>
+
+    <div class="edi_des">
+      <div class="edi_des_a">
+        <%= link_to '編集', edit_activity_path(@activity.id), method: :get, class: "edi_des-btn" %>
+      </div>
+      <div class="edi_des_a">
+        <%= link_to '削除', activity_path(@activity.id), method: :delete, data: {confirm: "削除しますか？"}, class: "edi_des-btn" %> 
+      </div>
+    </div>
+  </div>
+</body>

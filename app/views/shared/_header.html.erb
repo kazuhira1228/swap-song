@@ -2,6 +2,7 @@
   <h1>swap-song</h1>
   <div class="nav">
     <ul class="lists">
+      <li><%= link_to 'TOP', root_path, class: "list" %></li> 
       <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "list" %></li> 
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "list" %></li>

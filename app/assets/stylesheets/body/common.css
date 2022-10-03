@@ -1,3 +1,5 @@
+/* 背景 */
+
 body {
   overflow: visible !important;
   background: -webkit-linear-gradient(45deg, #7ca6ce 10%, white 90%);
@@ -7,3 +9,181 @@ body {
   background: linear-gradient(45deg, #7ca6ce 10%, white 90%);
   background-attachment: fixed;
  }
+
+ /* 背景 終 */
+
+
+
+.form-sp {
+  width: 100vh;
+  margin: 50px auto;
+  padding: 0 auto;
+  text-align: center;
+}
+/* formを適用している */
+
+
+.form-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+
+.form-table th,
+.form-table td {
+  padding: 20px 20px;
+  text-align: left;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.form-table th {
+  width: 20vw;
+}
+
+.form-item,
+.form-body {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.form-item {
+  width: 100vw;
+  white-space: nowrap;
+}
+
+.form-body {
+  width: 60vw;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+.common-btn {
+  height: 100px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  display: block; 
+  margin: 0 auto; 
+  font-size: 20px; 
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding: 90px auto;
+  margin: 80px auto;
+}
+
+
+
+
+/* 見せる系で使うやつ */
+
+.form-act {
+  width: 100vh;
+  margin: 50px auto;
+  padding: 0 auto;
+  text-align: left;
+}
+
+.activity-post-list {
+  margin: 10px;
+}
+
+.activity_1day {
+  border: 1px solid black;
+  list-style: none;
+  margin: 10px;
+}
+
+.activity-list {
+  padding-left: 10px;
+}
+
+.activity-list-sp {
+  padding-left: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.activity-list-btn {
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.activity-list-font {
+  text-decoration: underline;
+}
+
+.btn-3 {
+  width: 250px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  text-decoration: none;
+  font-size: 15px; 
+  padding: 8px;
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.purchase-btn {
+  width: 120px;
+  background-color: #EEEEEE;
+  text-align: center;
+  opacity: 60%;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 15px 10px 10px 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3); 
+}
+
+.purchase-btn-text {
+  color: #000000;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  width: 110px;
+}
+
+.edi_des {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.edi_des-btn {
+  width: 140px; 
+  height: 70px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  display: block; 
+  margin: auto; 
+  font-size: 20px; 
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin: 50px;
+  padding-top: 20px;
+}
