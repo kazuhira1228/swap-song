@@ -77,3 +77,60 @@ body {
   padding: 90px auto;
   margin: 80px auto;
 }
+
+
+
+
+/* 見せる系で使うやつ */
+
+.form-act {
+  width: 100vh;
+  margin: 50px auto;
+  padding: 0 auto;
+  text-align: left;
+}
+
+.activity-post-list {
+  margin: 10px;
+}
+
+.activity_1day {
+  border: 1px solid black;
+  list-style: none;
+  margin: 10px;
+}
+
+.activity-list {
+  padding-left: 10px;
+}
+
+.activity-list-sp {
+  padding-left: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.activity-list-btn {
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.activity-list-font {
+  text-decoration: underline;
+}
+
+.btn-3 {
+  width: 250px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  text-decoration: none;
+  font-size: 15px; 
+  padding: 8px;
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}

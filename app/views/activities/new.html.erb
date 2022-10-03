@@ -2,53 +2,50 @@
 
 <body>
 
+  <%= form_with model: @activity, local: true do |f| %>
   <div class="form">
 
-    <h1 class="form-title">新規投稿</h1><br />
+    <h2 class="form-title">新規登録</h2><br />
 
-    <form aciton="">
 
-      <%= form_with model: @activity, local: true do |form| %>
 
-      <table class="form-table">
+    <div class="field">
+      <%= f.label :グループ名 %><br />
+      <%= f.text_field :group, autofocus: true, autocomplete: "group" %>
+    </div>
 
-        <tr class="form-tables">
-          <th class="form-item">グループ名</th>
-          <td class="form-body"><%= form.text_field :group, class: "form-body" %></td>
-        </tr>
-        <tr>
-          <th class="form-item">活動日</th>
-          <td class="form-body"><%= form.date_field :activity_day, class: "form-body" %></td>
-        </tr>
-        <tr>
-          <th class="form-item">練習曲</th>
-          <td class="form-body"><%= form.text_field :song, class: "form-body", placeholder: "奏(スキマスイッチ)" %></td>
-        </tr>
-        <tr>
-          <th class="form-item">練習場所</th>
-          <td class="form-body"><%= form.text_field :studio, class: "form-body" %></td>
-        </tr>
-        <tr>
-          <th class="form-item">活動記録</th>
-          <td class="form-body"><%= form.text_area :text, class: "form-body" %></td>
-        </tr>
-        <tr>
-          <th class="form-item">画像</th>
-          <td class="form-body">
-            <%= form.file_field :image %>
-          </td>
-        </tr>
-        
-      </table>
+    <div class="field">
+      <%= f.label :活動日 %><br />
+      <%= f.date_field :activity_day, autofocus: true, autocomplete: "activity_day" %>
+    </div>
 
-      <div>
-        <%= form.submit "投稿", class: "common-btn" %>
-      </div>
+    <div class="field">
+      <%= f.label :練習曲 %><br />
+      <%= f.text_field :song, autofocus: true, autocomplete: "song" %>
+    </div>
 
-    <% end %>
+    <div class="field">
+      <%= f.label :練習場所 %><br />
+      <%= f.text_field :studio, autofocus: true, autocomplete: "studio" %>
+    </div>
 
-    </form>
+    <div class="field">
+      <%= f.label :活動記録 %><br />
+      <%= f.text_area :text, autofocus: true, autocomplete: "text" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :画像 %><br />
+      <%= f.file_field :image, autofocus: true, autocomplete: "image" %>
+    </div>
+    <br />
 
   </div>
+
+  <div>
+    <%= f.submit "投稿", class: "devise-btn" %>
+  </div>
+
+  <% end %>
 
 </body>

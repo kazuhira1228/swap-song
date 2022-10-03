@@ -2,7 +2,7 @@
 
 
 <body>
-  <div class="form">
+  <div class="form-act">
   <h2 class="form-title">活動記録タイムライン</h2><br />
   <ul>
     <% @activities.each do |act| %>
@@ -13,7 +13,7 @@
         <div class="activity-list">
           <h3>
             <span class="activity-list-font">グループ</span><br />
-            <%= act.group_name %>
+            <%= act.group %>
           <h3>
         </div>
         <div class="activity-list">
@@ -35,7 +35,7 @@
         </div>
         <div class="activity-list-sp">
           <div class="activity-list-btn">
-            <%= link_to '詳細', activity_path(activity.id), method: :get, class: "btn-3" %>
+            <%# <%= link_to '詳細', activity_path(id), method: :get, class: "btn-3" %> %>
           </div>
         </div>
       </li>
