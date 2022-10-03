@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
 
   def index
-    @tweets = Tweet.all
+    @acts = Activity.all
   end
 
 end
