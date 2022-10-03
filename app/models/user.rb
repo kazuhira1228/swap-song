@@ -18,6 +18,7 @@ class User < ApplicationRecord
   end
   
   has_many :activities
+  has_many :groups
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex

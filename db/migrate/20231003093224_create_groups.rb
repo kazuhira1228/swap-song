@@ -1,7 +1,7 @@
 class CreateGroups < ActiveRecord::Migration[6.0]
   def change
     create_table :groups do |t|
-      t.string     :group_name,  null: false
+      t.string     :group,       null: false
       t.string     :first_user,  null: false
       t.string     :second_user, null: false
       t.string     :third_user,  null: false
