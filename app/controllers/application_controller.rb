@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
     authenticate_or_request_with_http_basic do |username, password|
       username = 'kazuhira' && password = '1228'
     end
-  end  
+  end
+end
