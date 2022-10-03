@@ -1,3 +1,54 @@
 <%= render partial: "shared/header" %>
 
-ya
+
+<body>
+  <div class="form">
+  <h2 class="form-title">活動記録タイムライン</h2><br />
+  <ul>
+    <% @activities.each do |act| %>
+      <li class="activity_1day">
+        <div class="activity-list">
+          <h2>練習日：<%= act.activity_day %></h2><br />
+        </div>
+        <div class="activity-list">
+          <h3>
+            <span class="activity-list-font">グループ</span><br />
+            <%= act.group_name %>
+          <h3>
+        </div>
+        <div class="activity-list">
+          <h3>
+            <span class="activity-list-font">練習曲</span><br />
+            <%= act.song %>
+          <h3>
+        </div>
+        <div class="activity-list">
+          <h3>
+            <span class="activity-list-font">練習場所</span><br />
+            <%= act.studio %><br /><br />
+          <h3>
+        </div>
+        <div class="activity-list">
+          <h4>
+            by <%= act.user.nickname %>さん
+          <h4>
+        </div>
+        <div class="activity-list-sp">
+          <div class="activity-list-btn">
+            <%= link_to '詳細', activity_path(activity.id), method: :get, class: "btn-3" %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  </div>
+</body>
+
+
+
+<% if user_signed_in? %>
+  <%= link_to(new_activity_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>投稿</span>
+  <% end %>
+<% end %>
+

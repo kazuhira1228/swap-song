@@ -1,3 +1,5 @@
+/* 背景 */
+
 body {
   overflow: visible !important;
   background: -webkit-linear-gradient(45deg, #7ca6ce 10%, white 90%);
@@ -7,3 +9,71 @@ body {
   background: linear-gradient(45deg, #7ca6ce 10%, white 90%);
   background-attachment: fixed;
  }
+
+ /* 背景 終 */
+
+
+
+.form-sp {
+  width: 100vh;
+  margin: 50px auto;
+  padding: 0 auto;
+  text-align: center;
+}
+/* formを適用している */
+
+
+.form-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-table th,
+.form-table td {
+  padding: 20px 20px;
+  text-align: left;
+}
+
+.form-tables {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.form-item,
+.form-body {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.form-item {
+  width: 100vw;
+  white-space: nowrap;
+}
+
+.form-body {
+  width: 60vw;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+.common-btn {
+  height: 100px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  display: block; 
+  margin: 0 auto; 
+  font-size: 20px; 
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding: 90px auto;
+  margin: 80px auto;
+}
