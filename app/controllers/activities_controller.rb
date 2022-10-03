@@ -13,7 +13,7 @@ class ActivitiesController < ApplicationController
     if @activity.save
       redirect_to action: :create
     else
-      render root_path
+      render :new
     end
   end
 
@@ -25,7 +25,7 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:group, :activity_day, :song, :studio, :text, :image).merge(user: current_user)
+    params.require(:activity).permit(:group, :activity_day, :song, :studio, :text, :image).merge(user_id: current_user.id)
   end
 
 end

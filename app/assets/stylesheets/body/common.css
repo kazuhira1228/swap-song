@@ -28,15 +28,18 @@ body {
   margin-bottom: 20px;
 }
 
+
+
 .form-table th,
 .form-table td {
   padding: 20px 20px;
   text-align: left;
-}
-
-.form-tables {
   border-collapse: collapse;
   table-layout: fixed;
+}
+
+.form-table th {
+  width: 20vw;
 }
 
 .form-item,
@@ -133,4 +136,54 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+}
+
+.purchase-btn {
+  width: 120px;
+  background-color: #EEEEEE;
+  text-align: center;
+  opacity: 60%;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 15px 10px 10px 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3); 
+}
+
+.purchase-btn-text {
+  color: #000000;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  width: 110px;
+}
+
+.edi_des {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.edi_des-btn {
+  width: 140px; 
+  height: 70px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  display: block; 
+  margin: auto; 
+  font-size: 20px; 
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin: 50px;
+  padding-top: 20px;
 }
