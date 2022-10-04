@@ -1,0 +1,64 @@
+<%= render partial: "shared/header" %>
+
+
+<body>
+  <div class="form">
+    <h1 class="form-title">グループ紹介</h1><br />
+    <form aciton="">
+      <table class="form-table">
+        <tr>
+          <th class="form-item">グループ名</th>
+          <td class="form-body">
+            <%= @group.group %>
+          </td>
+        </tr>
+        <tr>
+          <th class="form-item">メンバー</th>
+          <td class="form-body">
+            <ul>
+              <li><%= @group.first_user %></li>
+              <li><%= @group.second_user %></li>
+              <li><%= @group.third_user %></li>
+              <li><%= @group.fourth_user %></li>
+              <li><%= @group.fifth_user %></li>
+              <li><%= @group.sixth_user %></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th class="form-item">結成日</th>
+          <td class="form-body">
+            <%= @group.group_since %>
+          </td>
+        </tr>
+        <tr>
+          <th class="form-item">紹介文</th>
+          <td class="form-body">
+            <%= @group.text %>
+          </td>
+        </tr>
+        <tr>
+          <th class="form-item">登録者</th>
+          <td class="form-body">
+            <%= @group.user.nickname %>さん
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <% if user_signed_in? && current_user.id == @group.user_id %>
+      <div class="edi_des">
+        <div class="edi_des_a">
+          <%= link_to '編集', edit_group_path(@group.id), method: :get, class: "edi_des-btn" %>
+        </div>
+        <div class="edi_des_a">
+          <%= link_to '削除', group_path(@group.id), method: :delete, data: {confirm: "削除しますか？"}, class: "edi_des-btn" %> 
+        </div>
+      </div>
+    <% else %>
+      ※※※ グループの登録者以外は、編集/削除ができません ※※※※
+    <% end %> 
+
+  </div>
+
+</body>
