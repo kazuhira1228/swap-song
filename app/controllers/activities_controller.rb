@@ -19,6 +19,8 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @comment = Comment.new
+    @comments = @activity.comments.includes(:user)
   end
 
   def edit

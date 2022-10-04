@@ -1,0 +1,26 @@
+.comment-form {
+  margin-top: 70px;
+}
+
+.comment-sub-form {
+  margin: 70px;
+}
+
+
+.comment-btn  {
+  width: 140px; 
+  height: 70px;
+  background-color: #DBDBDB; 
+  color: #454545; 
+  font-weight: bold; 
+  display: block; 
+  margin: auto; 
+  font-size: 20px; 
+  border-radius: 200vh;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin: 30px auto;
+}
