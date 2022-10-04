@@ -19,6 +19,7 @@ class User < ApplicationRecord
   
   has_many :activities
   has_many :groups
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
