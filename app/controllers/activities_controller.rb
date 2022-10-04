@@ -1,7 +1,9 @@
 class ActivitiesController < ApplicationController
+  before_action :set_act, only: [:show, :edit]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
-    @activities = Activity.all
+    @activities = Activity.includes(:user).order("activity_day DESC")
   end
 
   def new
@@ -18,13 +20,11 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-    @activity = Activity.find(params[:id])
     @comment = Comment.new
     @comments = @activity.comments.includes(:user)
   end
 
   def edit
-    @activity = Activity.find(params[:id])
   end
 
   def update
@@ -49,4 +49,13 @@ class ActivitiesController < ApplicationController
     params.require(:activity).permit(:group, :activity_day, :song, :studio, :text, :image).merge(user_id: current_user.id)
   end
 
+  def set_act
+    @activity = Activity.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+  end
 end

@@ -52,7 +52,7 @@
         </div>
       </div>
     <% else %>
-      ※※※ 活動記録の投稿者以外は、編集/削除ができません ※※※※
+      <p>※※※ 活動記録の投稿者以外は、編集/削除ができません ※※※</p>
     <% end %> 
 
     <div class="comment-form">
@@ -62,7 +62,7 @@
           <%= form.submit "送信", class: "comment-btn" %>
         <% end %>
       <% else %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
       <% end %>
       <div class="comment-sub-form">
         <h3>＜コメント一覧＞</h3>

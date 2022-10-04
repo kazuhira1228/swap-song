@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+   before_action :set_group, only: [:show, :edit, :update]
+   before_action :move_to_index, except: [:index, :show]
 
   def index
     @groups = Group.all
@@ -19,15 +21,12 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.find(params[:id])
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
     if @group.update(group_params)
       redirect_to action: :index
     else
@@ -46,4 +45,15 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:group, :first_user, :second_user, :third_user, :fourth_user, :fifth_user, :sixth_user, :group_since, :text).merge(user_id: current_user.id)
   end
+
+  def set_group
+    @group = Group.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+  end
+
 end
