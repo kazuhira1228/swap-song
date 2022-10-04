@@ -42,13 +42,19 @@
       </table>
     </form>
 
-    <div class="edi_des">
-      <div class="edi_des_a">
-        <%= link_to '編集', edit_activity_path(@activity.id), method: :get, class: "edi_des-btn" %>
+    <% if user_signed_in? && current_user.id == @group.user_id %>
+      <div class="edi_des">
+        <div class="edi_des_a">
+          <%= link_to '編集', edit_activity_path(@activity.id), method: :get, class: "edi_des-btn" %>
+        </div>
+        <div class="edi_des_a">
+          <%= link_to '削除', activity_path(@activity.id), method: :delete, data: {confirm: "削除しますか？"}, class: "edi_des-btn" %> 
+        </div>
       </div>
-      <div class="edi_des_a">
-        <%= link_to '削除', activity_path(@activity.id), method: :delete, data: {confirm: "削除しますか？"}, class: "edi_des-btn" %> 
-      </div>
-    </div>
+    <% else %>
+      ※※※ 活動記録の投稿者以外は、編集/削除ができません ※※※※
+    <% end %> 
+
   </div>
+
 </body>

@@ -1,0 +1,64 @@
+<%= render partial: "shared/header" %>
+
+
+<body>
+
+  <%= form_with model: @group, local: true do |f| %>
+  <div class="form">
+
+    <h1 class="form-title">編集</h1><br />
+  
+    <div class="field">
+      <%= f.label :グループ名 %><br />
+      <%= f.text_field :group, autofocus: true, autocomplete: "group" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メンバー① %><br />
+      <%= f.text_field :first_user, autofocus: true, autocomplete: "first_user" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メンバー② %><br />
+      <%= f.text_field :second_user, autofocus: true, autocomplete: "second_user" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メンバー③ %><br />
+      <%= f.text_field :third_user, autofocus: true, autocomplete: "third_user" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メンバー④ %><br />
+      <%= f.text_field :fourth_user, autofocus: true, autocomplete: "fourth_user" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メンバー⑤ %><br />
+      <%= f.text_field :fifth_user, autofocus: true, autocomplete: "fifth_user" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メンバー⑥ %><br />
+      <%= f.text_field :sixth_user, autofocus: true, autocomplete: "sixth_user", placeholder: "5人バンドの場合、記入不要" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :結成日 %><br />
+      <%= f.date_field :group_since, autofocus: true, autocomplete: "group_since" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :グループ紹介 %><br />
+      <%= f.text_area :text, autofocus: true, autocomplete: "text" %>
+    </div>
+
+  </div>
+  
+  <div>
+    <%= f.submit "更新", class: "devise-btn" %>
+  </div>
+
+  <% end %>
+
+</body>

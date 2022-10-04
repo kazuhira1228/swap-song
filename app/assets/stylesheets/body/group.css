@@ -1,0 +1,26 @@
+.group-blocks {
+  border: 1px solid black;
+  list-style: none;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-block {
+  padding-left: 10px;
+}
+
+.group-btn {
+  padding-top: 30px;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.background {
+  background-image: image-url('wallpaper.jng');
+}
