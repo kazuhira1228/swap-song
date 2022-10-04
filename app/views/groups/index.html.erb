@@ -1,4 +1,29 @@
 <%= render partial: "shared/header" %>
 
 
-<%= link_to "グループ新規登録", new_group_path, class: "list" %>
+<body>
+  <div class="form">
+    <h1 class="form-title">グループ一覧表</h1>
+    <% @groups.each do |group| %>
+        <div class="group-blocks">
+          <div class="group-block">
+            <h3>
+              <span class="activity-list-font">グループ</span><br />
+              <%= group.group %>
+            <h3>
+          </div>
+          <div class="group-block">
+            <div class="activity-ed">
+              <%= link_to '詳細', group_path(group.id), method: :get, class: "btn-3" %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</body>
+
+<% if user_signed_in? %>
+  <%= link_to(new_group_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>投稿</span>
+  <% end %>
+<% end %>
