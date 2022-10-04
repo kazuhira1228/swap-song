@@ -6,6 +6,8 @@
   <div class="form">
 
     <h1 class="form-title">新規作成</h1><br />
+
+    <%= render 'shared/error_messages', model: f.object %>
   
     <div class="field">
       <%= f.label :グループ名 %><br />
