@@ -1,11 +1,12 @@
 <%= render partial: "shared/header" %>
 
+
 <body>
 
   <%= form_with model: @group, local: true do |f| %>
   <div class="form">
 
-    <h1 class="form-title">新規作成</h1><br />
+    <h1 class="form-title">編集</h1><br />
   
     <div class="field">
       <%= f.label :グループ名 %><br />
@@ -55,7 +56,7 @@
   </div>
   
   <div>
-    <%= f.submit "結成", data: {confirm: "登録が完了しました。素敵なアカペラ活動を。"}, class: "devise-btn" %>
+    <%= f.submit "更新", class: "devise-btn" %>
   </div>
 
   <% end %>
