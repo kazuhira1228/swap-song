@@ -1,0 +1,36 @@
+<%= render partial: "shared/header" %>
+
+
+<body>
+  <div class="form">
+    <h1 class="form-title">メンバー一覧</h1>
+    <% @users.each do |user| %>
+      <form aciton="">
+        <table class="form-table">
+          <tr>
+            <th class="form-item">メンバー</th>
+            <td class="form-body">
+              <%= user.nickname %>
+            </td>
+          </tr>
+          <tr>
+            <th class="form-item">プロフィール</th>
+            <td class="form-body">
+              <ul>
+                <li>性別　　　　：<%= user.sex.name %></li>
+                <li>都道府県　　：<%= user.prefecture.name %></li>
+                <li>市区町村　　：<%= user.city %></li>
+                <li>休日　　　　：<%= user.holiday.name %></li>
+                <li>入会時期　　：<%= user.member_since %></li>
+                <li>パート　　　：<%= user.favorite_part %></li>
+                <li>好きな歌手　：<%= user.favorite_singer %></li>
+                <li>所属グループ：<%= user.group %></li>
+                <li>兼任希望　　：<%= user.more_join.name %></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </form>
+    <% end %>
+  </div>
+</body>
