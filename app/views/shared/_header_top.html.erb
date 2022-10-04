@@ -1,0 +1,15 @@
+<header class="header">
+  <h1>swap-song</h1>
+  <div class="nav">
+    <ul class="lists">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "list" %></li> 
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "list" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "list" %></li> 
+        <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "list" %></li>
+      <% end %>
+      <li><%= link_to 'メンバー一覧',  users_path, class: "list" %></li>
+    </ul>
+  </div>
+</header>
