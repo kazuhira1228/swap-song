@@ -1,1 +1,62 @@
-a
+<%= render partial: "shared/header_devise" %>
+
+<body>
+  <div class="form">
+    <h1 class="form-title">マイページ</h1><br />
+    <form aciton="">
+      <table class="form-table">
+        <tr>
+         <th class="form-item">名前</th>
+         <td class="form-body"><%= @user.nickname %></td>
+        </tr>
+        <tr>
+         <th class="form-item">性別</th>
+         <td class="form-body"><%= @user.sex.name %></td>
+        </tr>
+        <tr>
+         <th class="form-item">都道府県</th>
+         <td class="form-body"><%= @user.prefecture.name %></td>
+        </tr>
+        <tr>
+         <th class="form-item">市区町村</th>
+         <td class="form-body"><%= @user.city %></td>
+        </tr>
+        <tr>
+         <th class="form-item">休日</th>
+         <td class="form-body"><%= @user.holiday.name %></td>
+        </tr>
+        <tr>
+         <th class="form-item">入会時期</th>
+         <td class="form-body"><%= @user.member_since %></td>
+        </tr>
+        <tr>
+         <th class="form-item">パート</th>
+         <td class="form-body"><%= @user.favorite_part %></td>
+        </tr>
+        <tr>
+        <tr>
+         <th class="form-item">好きな歌手</th>
+         <td class="form-body"><%= @user.favorite_singer %></td>
+        </tr>
+        <tr>
+         <th class="form-item">所属グループ</th>
+         <td class="form-body"><%= @user.group %></td>
+        </tr>
+        <tr>
+         <th class="form-item">他グループへの参加希望</th>
+         <td class="form-body"><%= @user.more_join.name %></td>
+        </tr>
+      </table>
+    </form>
+
+    <div class="edi_des">
+      <div class="edi_des_a">
+        <%= link_to '編集', edit_user_registration_path, method: :get, class: "edi_des-btn" %>
+      </div>
+      <div class="edi_des_a">
+        <%= link_to '削除', user_registration_path, method: :delete, data: {confirm: "削除しますか？"}, class: "edi_des-btn" %> 
+      </div>
+    </div>
+
+  </div>
+</body>
