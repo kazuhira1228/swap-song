@@ -1,6 +1,7 @@
 class Activity < ApplicationRecord
 
   with_options presence: true do
+    validates :group
     validates :activity_day
     validates :song
     validates :studio

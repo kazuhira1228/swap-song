@@ -6,6 +6,8 @@
   <div class="form">
 
     <h1 class="form-title">新規作成</h1><br />
+
+    <%= render 'shared/error_messages', model: f.object %>
   
     <div class="field">
       <%= f.label :グループ名 %><br />
@@ -14,7 +16,7 @@
 
     <div class="field">
       <%= f.label :メンバー① %><br />
-      <%= f.text_field :first_user, autofocus: true, autocomplete: "first_user" %>
+      <%= f.text_field :first_user, autofocus: true, autocomplete: "first_user", placeholder: "メンバー名はニックネームで記入" %>
     </div>
 
     <div class="field">
