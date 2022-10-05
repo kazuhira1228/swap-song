@@ -5,10 +5,12 @@
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 2px 2px 2px;
 }
 
 .group-block {
   padding-left: 10px;
+  text-align: left;
 }
 
 .group-btn {
