@@ -25,7 +25,7 @@ class User < ApplicationRecord
   validates :sex_id,        numericality: { other_than: 1, message: "can't be blank" }
   validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :holiday_id,    numericality: { other_than: 1, message: "can't be blank" }
-  validates :more_join_id,    numericality: { other_than: 1, message: "can't be blank" }
+  validates :more_join_id,  numericality: { other_than: 1, message: "can't be blank" }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
